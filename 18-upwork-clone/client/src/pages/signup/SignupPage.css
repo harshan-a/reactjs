@@ -1,0 +1,11 @@
+.signup-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 63px);
+  min-height: fit-content;
+  padding: 32px;
+  margin-top: 63px;
+  box-sizing: border-box;
+  min-width: fit-content;
+}

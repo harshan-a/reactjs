@@ -1,0 +1,53 @@
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 16px;
+  min-width: 400px;
+  width: 38%;
+}
+.signup-form > h4 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.signup-form .username-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+}
+.signup-form .input-container {
+  width: 100%;
+}
+.signup-form .input-container label {
+  font-size: 0.84rem;
+}
+.signup-form .input-bar-container {
+  margin-top: 5px;
+}
+
+.signup-form > .check-box-container {
+  width: 100%;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-top: -6px;
+  margin-bottom: 10px;
+}
+
+.signup-form > .submit-btn {
+  line-height: 36.8px;
+  padding: 0 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  /* margin-bottom: 10px; */
+}
+
+.signup-form > p {
+  font-size: 0.92rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+.signup-form > p > a {
+  color: var(--green);
+}

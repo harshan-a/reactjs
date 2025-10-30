@@ -1,4 +1,5 @@
-import { type MouseEvent, type Dispatch, type SetStateAction } from "react"
+import { useState } from "react"
+import type { MouseEvent, Dispatch, SetStateAction } from "react"
 
 import airbnbLogo from "../../../assets/logo/logo-airbnb-grey.svg"
 import bissellLogo from "../../../assets/logo/logo-bissell-grey.svg"
@@ -17,6 +18,8 @@ export default function TopSection({
   isFreelancer,
   setIsFreelancer,
 }: TopSectionProps) {
+  const [clientInput, setClientInput] = useState("")
+
   function handleChangeMode(e: MouseEvent<HTMLDivElement>) {
     const { mode } = e.currentTarget.dataset
     if (!isFreelancer && mode === "freelancer") setIsFreelancer(true)
@@ -49,17 +52,23 @@ export default function TopSection({
                   <input
                     type="text"
                     placeholder="Search by role, skills, or keywords"
+                    onChange={(e) => setClientInput(e.target.value)}
+                    value={clientInput}
                   />
                   <button className="search-btn">
-                    <img src={searchIcon} alt="" />
+                    <img src={searchIcon} alt="search" />
                   </button>
                 </div>
-                <div className="logo-container">
-                  <img src={microsoftLogo} alt="microsoft-logo" />
-                  <img src={airbnbLogo} alt="airbnb-logo" />
-                  <img src={glassdoorLogo} alt="glassdoor-logo" />
-                  <img src={bissellLogo} alt="bissell-logo" />
-                </div>
+                {clientInput ? (
+                  clientInput
+                ) : (
+                  <div className="logo-container">
+                    <img src={microsoftLogo} alt="microsoft-logo" />
+                    <img src={airbnbLogo} alt="airbnb-logo" />
+                    <img src={glassdoorLogo} alt="glassdoor-logo" />
+                    <img src={bissellLogo} alt="bissell-logo" />
+                  </div>
+                )}
               </div>
             ) : (
               <div className="freelancer-content">

@@ -1,0 +1,49 @@
+.wrapper .container > .input-bar-container > .input-icon.user-icon {
+  width: 20px;
+  left: 16px;
+}
+
+.wrapper .container > .continue-btn {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 9px;
+  font-size: 1rem;
+}
+
+.wrapper .container > .sign-up-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 30px;
+}
+.wrapper .container > .sign-up-container > p {
+  color: rgb(99, 99, 99);
+  font-weight: 100;
+  letter-spacing: 0.95px;
+}
+.wrapper .container > .sign-up-container > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  min-width: 150px;
+  height: 36px;
+  font-size: 0.95rem;
+
+  border: 2px solid green;
+  border-radius: 8px;
+  color: green;
+  background: none;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+.wrapper .container > .sign-up-container > a:hover {
+  background-color: rgba(0, 255, 0, 0.05);
+}
+
+.wrapper .container > .sign-up-container > a:active {
+  transform: scale(0.9);
+}

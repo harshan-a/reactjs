@@ -7,30 +7,35 @@ import linkedinIcon from "../assets/social-media-icons/linkedin.svg"
 import "./Footer.css"
 
 type FooterProps = {
-  footerContent: FooterType
+  footerContent?: FooterType
 }
 
 export default function Footer({ footerContent }: FooterProps) {
   return (
     <div className="footer">
-      <div className="services-container">
-        {Object.keys(footerContent).map((key, index) => {
-          return (
-            <div className="service" key={index}>
-              <span>{key.split("_").join(" ")}</span>
-              <ul>
-                {footerContent[key as keyof FooterType]?.map((c: string, i) => {
-                  return (
-                    <li title={c} key={i}>
-                      <a href={c}>{c}</a>
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
-          )
-        })}
-      </div>
+      {footerContent && (
+        <div className="services-container">
+          {Object.keys(footerContent).map((key, index) => {
+            return (
+              <div className="service" key={index}>
+                <span>{key.split("_").join(" ")}</span>
+                <ul>
+                  {footerContent[key as keyof FooterType]?.map(
+                    (c: string, i) => {
+                      return (
+                        <li title={c} key={i}>
+                          <a href={c}>{c}</a>
+                        </li>
+                      )
+                    }
+                  )}
+                </ul>
+              </div>
+            )
+          })}
+        </div>
+      )}
+
       <div className="social-media-container">
         <span>Follow me </span>
         <a href="http://instagram.com/hars._an_">

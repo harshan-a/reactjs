@@ -74,19 +74,40 @@
   margin-right: 25px;
   flex: 0 0 fit-content;
 }
-.buttons-container .signup-btn {
+.buttons-container a {
+  text-decoration: none;
   margin-left: 25px;
+}
+.buttons-container a .signup-btn {
   padding: 12px 25px;
   color: white;
 }
-.buttons-container .login-btn {
+.buttons-container a .login-btn {
   background: none;
   border: none;
   position: relative;
+  color: var(--primary-font-color);
 }
 .buttons-container .login-btn:hover {
   text-decoration: underline;
 }
 .buttons-container .login-btn:active {
   text-decoration: none;
+}
+
+/* signup header */
+.header .user-role-link-container {
+  display: flex;
+  column-gap: 20px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/* .header .user-role-link-container p {
+  font-size: 1rem;
+} */
+
+.header .user-role-link-container button {
+  background: transparent;
+  color: var(--green);
 }
