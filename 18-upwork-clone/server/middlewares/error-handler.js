@@ -1,3 +1,7 @@
 export default function errorHandler(err, req, res, next) {
-  res.send("Something went wrong, try again later...")
+  console.log(err)
+  res.status(err.statusCode || 500).json({
+    msg: err.message || "Something went wrong, try again later...",
+    err,
+  })
 }

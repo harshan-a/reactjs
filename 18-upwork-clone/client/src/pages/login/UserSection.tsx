@@ -1,42 +1,73 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { Link } from "react-router"
+import axios from "axios"
 
-import type { Dispatch, SetStateAction, ChangeEvent } from "react"
+import type { Dispatch, SetStateAction } from "react"
 
-import userIcon from "../../assets/icons/user-icon.svg"
+import api from "../../api"
+import InputBar from "../../components/InputBar"
+
+import { LoadingSetterContext } from "../../App"
 
 import "./UserSection.css"
 
 type UserSectionProps = {
   setIsUserVerified: Dispatch<SetStateAction<boolean>>
+  setUser: Dispatch<SetStateAction<unknown>>
 }
 
-export default function UserSection({ setIsUserVerified }: UserSectionProps) {
+export default function UserSection({
+  setIsUserVerified,
+  setUser,
+}: UserSectionProps) {
   const [userInput, setUserInput] = useState("")
+  const [error, setError] = useState("")
 
-  function handleInputChange(e: ChangeEvent<HTMLInputElement>) {
-    setUserInput(e.target.value)
-  }
+  const setIsLoading = useContext(LoadingSetterContext)
 
-  function handleUserVerification() {
-    console.log(userInput.trim())
-    setTimeout(() => {
+  async function handleUserVerification() {
+    try {
+      setIsLoading(true)
+      const { data: response } = await api.get(
+        "/api/v1/auth/check-user?email=" + userInput.trim()
+      )
+
+      // const response = { data: { email: "harshan2412005@gmail.com" } }
+
+      setIsLoading(false)
+
+      setUser(response.data)
       setIsUserVerified(true)
-    }, 100)
+      console.log(response)
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        if (err.response) setError(err.response.data.msg)
+        else if (err.request) setError(err.message)
+
+        console.log(err)
+      } else setError("Something went wrong, please try again later!!!")
+      console.log(err)
+      setIsLoading(false)
+    }
   }
 
   return (
     <>
       <h4>Log in to Upwork</h4>
-      <div className="input-bar-container">
-        <img src={userIcon} alt="user" className="input-icon user-icon" />
-        <input
-          type="text"
-          placeholder="Username or Email"
-          className="input-bar"
-          onChange={handleInputChange}
+      <div className="input-container">
+        <InputBar
+          type="user"
           value={userInput}
+          handleValueChange={(e) => {
+            setUserInput(e.target.value)
+            setError("")
+          }}
+          handleKeyDown={(e) => {
+            if (e.key === "Enter") handleUserVerification()
+          }}
+          placeholder="Username or Email"
         />
+        <span className="api-error-span">{error}</span>
       </div>
       <button
         className="continue-btn green-btn"

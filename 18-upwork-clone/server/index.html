@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100%;
+      }
+      .container header {
+        padding: 25px 15px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid green;
+      }
+      .container header a img {
+        width: 100px;
+      }
+      .container main {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        letter-spacing: 0.7px;
+      }
+      .container main h3 {
+        font-size: 20pt !important;
+        margin-bottom: 10px;
+      }
+      .container main p {
+        vertical-align: center;
+        user-select: none;
+      }
+      .container main p:not(:first-of-type) span {
+        color: rgb(0, 133, 0) !important;
+        font-size: 20pt !important;
+        user-select: text;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="http://localhost:5173/" target="_blank">
+          <img src="https://i.ibb.co/9HFCdW7k/logo.png" alt="logo" />
+        </a>
+      </header>
+      <main>
+        <h3>Password reset request</h3>
+        <p>Hi Harshan,</p>
+        <p>
+          The 6-digits OTP(one-time-password) is
+          <span class="otp-span">000000</span>&nbsp;(valid for 10 minutes)
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

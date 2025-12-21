@@ -51,3 +51,10 @@
 .signup-form > p > a {
   color: var(--green);
 }
+
+.signup-form > .api-error-span {
+  max-width: 100%;
+  width: fit-content;
+  word-wrap: break-word;
+  white-space: wrap;
+}

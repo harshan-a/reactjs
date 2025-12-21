@@ -1,0 +1,60 @@
+.input-bar-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.input-bar-container > .input-bar {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  padding: 10px 16px;
+  font-size: 0.84rem;
+  border-radius: 6px;
+
+  transition: background-color 0.15s ease;
+}
+.input-bar-container > .input-bar:hover {
+  outline: 2px solid black;
+  outline-offset: -2px; /* moving outline */
+  background-color: rgba(173, 216, 230, 0.1);
+}
+.input-bar-container > .input-bar:focus {
+  background-color: rgba(173, 216, 230, 0.1);
+}
+
+.input-bar-container > .input-bar.with-icon {
+  padding-left: 48px;
+}
+.input-bar-container > .input-icon {
+  position: absolute;
+}
+
+/* user-bar */
+.input-bar-container > .input-icon.user-icon {
+  width: 20px;
+  left: 16px;
+}
+
+/* password-bar */
+.input-bar-container .input-bar.password-bar {
+  padding-right: 52px;
+}
+.input-bar-container > .input-icon.password-icon {
+  width: 16px;
+  left: 16px;
+  user-select: none;
+}
+.input-bar-container > .password-view-btn {
+  display: flex;
+  position: absolute;
+  background: none;
+  cursor: pointer;
+  width: 24px;
+  right: 16px;
+  transition: transform 0.15s;
+}
+.input-bar-container > .password-view-btn:active {
+  transform: scale(0.95);
+}

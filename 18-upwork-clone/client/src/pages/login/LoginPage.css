@@ -1,41 +1,6 @@
 @import url("../../_variables.css");
 
-.wrapper {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 32px;
-}
-.wrapper .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* box-sizing: border-box; */
-  max-width: 28%;
-  min-width: 250px;
-  flex: 1 0;
-  row-gap: 25px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  /* border: 1px solid rgba(0, 0, 0, 0.15); */
-  border: none;
-  border-radius: 10px;
-  padding: 40px 78px;
-}
-.wrapper .container > * {
-  max-width: 350px;
-}
-
 .wrapper .container > h4 {
   font-size: 1.6rem;
   font-weight: 500;
-}
-
-.wrapper .container > .input-bar-container > .input-icon {
-  position: absolute;
-}
-.wrapper .container > .input-bar-container > .input-bar {
-  padding-left: 48px !important;
 }

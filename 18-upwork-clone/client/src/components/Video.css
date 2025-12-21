@@ -28,7 +28,7 @@
   content: "| |";
   font-size: 1.3rem;
   /* font-weight: 100; */
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   margin-left: 1px;
 }
 .video-container button.pause::before {

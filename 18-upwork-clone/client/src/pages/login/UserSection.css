@@ -1,8 +1,6 @@
-.wrapper .container > .input-bar-container > .input-icon.user-icon {
-  width: 20px;
-  left: 16px;
+.wrapper .container > .input-container {
+  width: 100%;
 }
-
 .wrapper .container > .continue-btn {
   width: 100%;
   box-sizing: border-box;
@@ -21,8 +19,8 @@
 }
 .wrapper .container > .sign-up-container > p {
   color: rgb(99, 99, 99);
-  font-weight: 100;
-  letter-spacing: 0.95px;
+  font-weight: 200;
+  /* letter-spacing: 0.95px; */
 }
 .wrapper .container > .sign-up-container > a {
   display: flex;
