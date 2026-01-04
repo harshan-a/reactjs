@@ -1,0 +1,33 @@
+.create-collection-wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(1.5px);
+}
+
+.create-collection-wrapper .container {
+  padding: 10px;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  width: 30%;
+  min-width: 250px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85);
+}
+.create-collection-wrapper .container input[type="text"] {
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+.create-collection-wrapper .container .btn-container {
+  align-self: center;
+  margin-top: 5px;
+}
+.create-collection-wrapper .container .btn-container > button {
+  margin-right: 5px;
+}

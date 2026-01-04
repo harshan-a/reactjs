@@ -1,0 +1,30 @@
+main .req-collection-section {
+  box-sizing: border-box;
+  width: 225px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  /* border-right: solid 1px gray; */
+  flex-shrink: 0;
+  /* margin-top: -1px; */
+  user-select: none;
+}
+
+main .req-collection-section .collection-title {
+  /* line-height: 30px; */
+  font-size: 22px;
+  font-weight: 400;
+  color: black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 6px 5px;
+}
+
+main .req-collection-section .create-collection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  font-size: 16px;
+  padding: 6px 5px;
+}

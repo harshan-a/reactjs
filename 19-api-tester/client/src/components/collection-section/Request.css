@@ -1,0 +1,51 @@
+main .req-collection-section .saved-collection-wrapper .collection .saved-req {
+  transition: background 0.15s;
+  border-radius: 2px;
+  padding: 2px 0px 2px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background: lightpink; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+main
+  .req-collection-section
+  .saved-collection-wrapper
+  .collection
+  .saved-req
+  .saved-req-name {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* background: lightgreen; */
+  flex: 1;
+  transition: transform 0.25s;
+  white-space: nowrap;
+}
+
+main
+  .req-collection-section
+  .saved-collection-wrapper
+  .collection
+  .saved-req-name:hover {
+  transform: scale(1.05);
+}
+main
+  .req-collection-section
+  .saved-collection-wrapper
+  .collection
+  .saved-req-name:active {
+  transform: scale(1);
+}
+main
+  .req-collection-section
+  .saved-collection-wrapper
+  .collection
+  .saved-req-wrapper
+  .saved-req:hover
+  .google-symbols-rounded {
+  opacity: 1;
+}

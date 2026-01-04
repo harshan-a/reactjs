@@ -1,0 +1,111 @@
+main .req-sending-section .req-sending-section-header .request-setting {
+  cursor: pointer;
+  user-select: none;
+
+  height: 100%;
+
+  position: relative;
+}
+main .req-sending-section .req-sending-section-header .request-setting > span {
+  font-size: 18px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 4px 6px;
+  height: 100%;
+  box-sizing: border-box;
+  transition: background 0.15s, transform 0.15s;
+
+  color: inherit;
+}
+main
+  .req-sending-section
+  .req-sending-section-header
+  .request-setting
+  .icon:hover {
+  background: rgba(211, 211, 211, 0.555);
+  /* color: white; */
+}
+main
+  .req-sending-section
+  .req-sending-section-header
+  .request-setting
+  .icon:active {
+  transform: scale(0.8);
+}
+
+main
+  .req-sending-section
+  .req-sending-section-header
+  .request-setting
+  .setting-options {
+  position: absolute;
+  /* box-sizing: border-box; */
+  top: 100%;
+  right: 100%;
+  border-radius: 3px;
+  background: white;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85);
+
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.15s, opacity 0.15s linear;
+}
+main
+  .req-sending-section
+  .req-sending-section-header
+  .request-setting
+  .setting-options.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+main
+  .req-sending-section
+  .req-sending-section-header
+  .request-setting
+  .setting-options
+  span {
+  font-size: 14px;
+}
+main
+  .req-sending-section
+  .req-sending-section-header
+  .request-setting
+  .setting-options
+  .option {
+  min-width: 120px;
+  white-space: nowrap;
+  padding: 3px 5px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  margin-top: 5px;
+
+  transition: all 0.15s;
+  /* margin-left: 15px; */
+}
+main
+  .req-sending-section
+  .req-sending-section-header
+  .request-setting
+  .setting-options
+  .option:hover {
+  margin-right: 15px;
+  padding: 5px 7px;
+  background: lightgray;
+}
+main
+  .req-sending-section
+  .req-sending-section-header
+  .request-setting
+  .setting-options
+  .option:active {
+  transform: scale(0.9);
+}

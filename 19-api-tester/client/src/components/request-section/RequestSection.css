@@ -1,0 +1,293 @@
+main .req-sending-section {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 30px);
+  flex: 1 0 400px;
+  margin: 15px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85);
+  /* border: 1px solid rgba(0, 0, 0, 0.15); */
+  border-radius: 5px;
+  /* background: lightblue; */
+  overflow-y: scroll;
+  position: relative;
+}
+main .req-sending-section::-webkit-scrollbar {
+  display: none;
+}
+
+main .req-sending-section .req-sending-section-header {
+  display: flex;
+  align-items: center;
+
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+main .req-sending-section .req-sending-section-header .sending-title {
+  /* align-self: center; */
+  flex: 1;
+  text-align: center;
+  font-size: 19px;
+  height: 29px;
+  color: black;
+  /* background: lightblue; */
+}
+
+main .req-sending-section .sending-wrapper {
+  /* background: lightblue; */
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .req-sending-section .sending-wrapper .send-req-wrapper {
+  /* background: lightpink; */
+  margin-bottom: 10px;
+  padding: 10px;
+
+  width: 50%;
+  min-width: 330px;
+
+  display: grid;
+  grid-template-columns: 80px minmax(100px, 300px) 80px;
+  grid-template-rows: 30px;
+  row-gap: 8px;
+  column-gap: 8px;
+
+  /* align-items: center; */
+  justify-content: space-between;
+
+  border-radius: 5px;
+  /* box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.25); */
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+main
+  .req-sending-section
+  .sending-wrapper
+  .send-req-wrapper
+  .req-method-drop-down,
+main
+  .req-sending-section
+  .sending-wrapper
+  .save-req-wrapper
+  .collection-to-save-req {
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+main
+  .req-sending-section
+  .sending-wrapper
+  .send-req-wrapper
+  input[type="text"] {
+  height: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid lightgray;
+  border-radius: 5px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  font-size: 12px;
+  text-overflow: ellipsis;
+}
+main .req-sending-section .sending-wrapper .send-req-wrapper .request-base-url {
+  grid-column: 2/4;
+  font-size: 12px;
+  color: rgb(128, 128, 128);
+  user-select: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 2px;
+}
+
+main .req-sending-section .sending-wrapper .req-body-wrapper {
+  /* background: lightpink; */
+  width: 50%;
+  min-width: 330px;
+  padding: 10px;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: start;
+  column-gap: 20px;
+
+  /* box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.25); */
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px;
+}
+main .req-sending-section .sending-wrapper .req-body-wrapper .body-btn {
+  padding: 5px;
+}
+main
+  .req-sending-section
+  .sending-wrapper
+  .req-body-wrapper
+  .text-area-wrapper {
+  /* width: calc(100% - 60px - 20px); button width - column-gap */
+  height: 100%;
+  flex: 1;
+}
+main
+  .req-sending-section
+  .sending-wrapper
+  .req-body-wrapper
+  .text-area-wrapper
+  textarea {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: none;
+
+  resize: none;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.85);
+}
+main
+  .req-sending-section
+  .sending-wrapper
+  .req-body-wrapper.show-body-text-area {
+  height: 150px;
+}
+main
+  .req-sending-section
+  .sending-wrapper
+  .req-body-wrapper.show-body-text-area
+  textarea {
+  display: initial;
+}
+
+main .req-sending-section .sending-wrapper .display-res-wrapper {
+  /* background: lightpink; */
+  width: 85%;
+  min-width: 330px;
+  padding: 10px;
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.85);
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+  flex: 1 1 200px;
+  overflow: auto;
+  white-space: wrap;
+}
+main
+  .req-sending-section
+  .sending-wrapper
+  .display-res-wrapper
+  .res-status-wrapper
+  span {
+  font-size: 14px;
+  color: lightpink;
+}
+
+main .req-sending-section .sending-wrapper .save-req-wrapper {
+  /* background: lightpink; */
+  width: 50%;
+  min-width: 350px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  /* box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.85); */
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+main
+  .req-sending-section
+  .sending-wrapper
+  .save-req-wrapper.save-req-changes-wrapper {
+  justify-content: center;
+}
+
+main .req-sending-section .sending-wrapper .save-req-wrapper label {
+  pointer-events: none;
+}
+
+main
+  .req-sending-section
+  .sending-wrapper
+  .save-req-wrapper
+  .collection-to-save-req {
+  height: 30px !important;
+  box-sizing: content-box !important;
+  flex: 1;
+  pointer-events: none;
+  text-overflow: ellipsis;
+}
+
+main .req-sending-section .sending-wrapper .save-req-wrapper .save-req-btn {
+  pointer-events: none;
+}
+
+main
+  .req-sending-section
+  .sending-wrapper
+  .save-req-wrapper
+  input[type="text"] {
+  min-width: 120px;
+  max-width: 250px;
+  font-size: 12px;
+  height: 30px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  pointer-events: none;
+  flex: 1;
+}
+
+main
+  .req-sending-section
+  .sending-wrapper
+  .save-req-wrapper
+  .save-req-changes-btn {
+  padding: 0px 5px;
+  pointer-events: none;
+}
+
+main .req-sending-section .sending-wrapper .save-req-wrapper.allow-to-save {
+  cursor: default;
+  opacity: 1;
+}
+
+main
+  .req-sending-section
+  .sending-wrapper
+  .save-req-wrapper.allow-to-save
+  label,
+main
+  .req-sending-section
+  .sending-wrapper
+  .save-req-wrapper.allow-to-save
+  .collection-to-save-req,
+main
+  .req-sending-section
+  .sending-wrapper
+  .save-req-wrapper.allow-to-save
+  .save-req-btn,
+main
+  .req-sending-section
+  .sending-wrapper
+  .save-req-wrapper.allow-to-save
+  input[type="text"],
+main
+  .req-sending-section
+  .sending-wrapper
+  .save-req-wrapper.allow-to-save
+  .save-req-changes-btn {
+  pointer-events: auto;
+}
