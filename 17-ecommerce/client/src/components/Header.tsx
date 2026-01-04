@@ -1,19 +1,18 @@
-import { 
-  Link, 
-  NavLink, 
-  useNavigate, 
-  // useSearchParams 
+import {
+  Link,
+  NavLink,
+  useNavigate,
+  // useSearchParams
 } from "react-router"
 import { useState, type ChangeEvent, type KeyboardEvent } from "react"
 
 import { calculateCartQuantity } from "../utils/calculateCartQuantity"
 import type { Cart } from "../utils/types"
 
-import logoWhite from "../assets/images/logo-white.svg"
-import mobileLogoWhite from "../assets/images/mobile-logo-white.svg"
+import logoWhite from "../assets/images/logo-new.svg"
+import mobileLogoWhite from "../assets/images/mobile-logo-new.svg"
 import searchIcon from "../assets/images/icons/search-icon.png"
 import cartIcon from "../assets/images/icons/cart-icon.png"
-
 
 import "./Header.css"
 
@@ -70,7 +69,6 @@ for(let key in obj) {
 // console.log(obj)
 */
 
-
 type HeaderProps = {
   cart: Cart
 }
@@ -83,18 +81,18 @@ function Header({ cart }: HeaderProps) {
   const navigate = useNavigate()
 
   function handleSearchUpdate(e: ChangeEvent<HTMLInputElement>) {
-    const { value:search } = e.target
+    const { value: search } = e.target
     setSearch(search)
     navigate(`/?search=${search}`)
   }
 
-  function handleKeyDown (e: KeyboardEvent<HTMLInputElement>) {
-    if(e.key === "Enter") {
+  function handleKeyDown(e: KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "Enter") {
       handleSearchEvent()
     }
   }
 
-  function handleSearchEvent () {
+  function handleSearchEvent() {
     // navigate(`/?search=${search}`)
     setSearch("")
   }
@@ -103,18 +101,16 @@ function Header({ cart }: HeaderProps) {
     <div className="header">
       <div className="left-section">
         <Link to="/" className="header-link">
-          <img className="logo"
-            src={logoWhite} />
-          <img className="mobile-logo"
-            src={mobileLogoWhite} />
+          <img className="logo" src={logoWhite} />
+          <img className="mobile-logo" src={mobileLogoWhite} />
         </Link>
       </div>
 
       <div className="middle-section">
-        <input 
-          className="search-bar" 
-          type="text" 
-          placeholder="Search" 
+        <input
+          className="search-bar"
+          type="text"
+          placeholder="Search"
           value={search}
           onChange={handleSearchUpdate}
           onKeyDown={handleKeyDown}
@@ -133,9 +129,7 @@ function Header({ cart }: HeaderProps) {
 
         <Link className="cart-link header-link" to="/checkout">
           <img className="cart-icon" src={cartIcon} />
-          <div className="cart-quantity">
-            {calculateCartQuantity(cart)}
-          </div>
+          <div className="cart-quantity">{calculateCartQuantity(cart)}</div>
           <div className="cart-text">Cart</div>
         </Link>
       </div>
