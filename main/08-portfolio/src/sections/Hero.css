@@ -1,0 +1,5 @@
+@layer components {
+  .profile-container {
+    @apply box-border w-50 h-40 mt-10 self-center shrink-0 rounded-full select-none before:content-[''] before:absolute before:-inset-1.5 before:bg-linear-to-r before:to-cyan-500 before:via-cyan-200  before:from-cyan-100 before:rounded-full relative before:animate-[spin_2s_linear_infinite];
+  }
+}

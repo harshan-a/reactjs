@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "./Components/Header.css";
+@import "./sections/Hero.css";
+
+@layer base {
+  body {
+    @apply bg-black selection:bg-cyan-300 selection:text-black/90 [&::-webkit-scrollbar]:hidden;
+  }
+
+  * {
+    @apply text-gray-50 cursor-none;
+  }
+}
+
+@theme {
+  --breakpoint-mobile: 426px;
+  --breakpoint-tablet: 769px;
+  --color-primary: var(--color-gray-200);
+  --spacing-header-p: calc(var(--spacing) * 18);
+}
