@@ -1,38 +1,38 @@
 import { useState, useEffect } from "react"
-import mobileLogo from "../assets/mobile-logo-new.svg"
+import mobileLogo from "../assets/logos/mobile-logo-new.svg"
 
 const CustomCursor = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [mousePosition, setMousePosition] = useState({ x: -10, y: -10 })
 
   useEffect(() => {
-    const updateMousePosition = (ev: MouseEvent | TouchEvent) => {
-      const clientX = "clientX" in ev ? ev.clientX : ev.touches[0].clientX
-      const clientY = "clientY" in ev ? ev.clientY : ev.touches[0].clientY
-      setMousePosition({ x: clientX, y: clientY })
+    const updateMousePosition = (ev: PointerEvent) => {
+      if (ev.pointerType === "mouse" || ev.pointerType === "pen") {
+        setMousePosition({ x: ev.clientX, y: ev.clientY })
+      }
+      // const clientX = "clientX" in ev ? ev.clientX : ev.touches[0].clientX
+      // const clientY = "clientY" in ev ? ev.clientY : ev.touches[0].clientY
     }
 
-    window.addEventListener("mousemove", updateMousePosition)
-    window.addEventListener("touchmove", updateMousePosition)
+    window.addEventListener("pointermove", updateMousePosition)
 
-    // Cleanup the event listener on component unmount
+    // window.addEventListener("mousemove", updateMousePosition)
+    // window.addEventListener("touchmove", updateMousePosition)
+
     return () => {
-      window.removeEventListener("mousemove", updateMousePosition)
-      window.removeEventListener("touchmove", updateMousePosition)
+      window.addEventListener("pointermove", updateMousePosition)
+      // window.removeEventListener("mousemove", updateMousePosition)
+      // window.removeEventListener("touchmove", updateMousePosition)
     }
   }, [])
 
   return (
     <div
-      className="fixed w-5 h-5 rounded-full pointer-events-none -translate-1/2 transition-transform duration-100 ease-out z-10000"
+      className="fixed w-6 h-6 rounded-full pointer-events-none -translate-1/2 transition-transform duration-100 ease-out z-10000"
       style={{
         left: `${mousePosition.x}px`,
         top: `${mousePosition.y}px`,
       }}>
-      <img
-        src={mobileLogo}
-        alt="Cursor Logo"
-        className="max-mobile:hidden w-full h-full"
-      />
+      <img src={mobileLogo} alt="Cursor Logo" className="w-full h-full" />
     </div>
   )
 }

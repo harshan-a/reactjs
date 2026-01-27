@@ -1,0 +1,5 @@
+@layer components {
+  .contact-form {
+    @apply relative max-desktop:animate-zoom-in desktop:animate-slide-in-from-right flex-1 max-h-fit bg-secondary/5 ring-1 ring-cyan-400 rounded-sm p-6 flex flex-col gap-5 [&>input,&>textarea]:text-sm [&>input,&>textarea]:font-mono [&>input,&>textarea]:tracking-wide [&>input,&>textarea]:text-secondary [&>input,&>textarea]:border-b [&>input,&>textarea]:border-b-secondary/50 [&>input,&>textarea]:focus:border-b-cyan-400 [&>input,&>textarea]:outline-none [&>input,&>textarea]:py-1.5;
+  }
+}

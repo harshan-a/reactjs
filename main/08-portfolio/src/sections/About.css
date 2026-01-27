@@ -1,0 +1,5 @@
+@layer components {
+  .subtitle {
+    @apply w-fit text-2xl font-semibold mb-6 select-none relative before:content-[""] before:absolute before:w-1/2 before:bottom-0 before:h-0.5 before:bg-cyan-300 before:-mb-1 before:rounded hover:before:animate-[increase-width_1s_linear_infinite_alternate];
+  }
+}

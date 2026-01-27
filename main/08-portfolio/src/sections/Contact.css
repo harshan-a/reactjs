@@ -1,0 +1,11 @@
+@layer Components {
+  .contact-link {
+    @apply flex items-center gap-x-2 h-8 hover:[&>span]:text-cyan-400 w-fit;
+  }
+  .contact-link > img {
+    @apply h-full aspect-square;
+  }
+  .contact-link > span {
+    @apply text-sm tracking-wide;
+  }
+}

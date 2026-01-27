@@ -1,5 +1,5 @@
 @layer components {
   .header {
-    @apply fixed top-6 left-1/2 -translate-x-1/2 rounded-sm bg-black/85 px-5 py-2 ring-cyan-400 ring backdrop-blur-[3px] hover:scale-115 transition-all duration-400 ease-in-out text-sm z-1000;
+    @apply fixed top-6 left-1/2 -translate-x-1/2 rounded-sm bg-black/85 px-5 py-2 ring-cyan-400 ring backdrop-blur-[3px] hover:scale-110 transition-all duration-400 ease-in-out text-sm z-1000 **:select-none;
   }
 }

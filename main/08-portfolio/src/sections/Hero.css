@@ -1,5 +1,5 @@
 @layer components {
   .profile-container {
-    @apply box-border w-50 h-40 mt-10 self-center shrink-0 rounded-full select-none before:content-[''] before:absolute before:-inset-1.5 before:bg-linear-to-r before:to-cyan-500 before:via-cyan-200  before:from-cyan-100 before:rounded-full relative before:animate-[spin_2s_linear_infinite];
+    @apply box-border w-50 h-42 mt-10 mb-7 shrink-0 rounded-full select-none before:content-[''] before:absolute before:-inset-1.5 before:bg-linear-to-r before:to-cyan-500 before:via-cyan-200  before:from-cyan-100 before:rounded-full relative before:animate-[spin_2s_linear_infinite] tablet:mt-0 tablet:mr-10 tablet:flex-1 tablet:min-w-55 tablet:max-w-82 tablet:h-82 desktop:min-w-82 desktop:max-w-103 desktop:h-103 desktop:mr-auto;
   }
 }
