@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import mobileLogo from "../assets/logos/mobile-logo-new.svg"
 
 const CustomCursor = () => {
-  const [mousePosition, setMousePosition] = useState({ x: -10, y: -10 })
+  const [mousePosition, setMousePosition] = useState({ x: -50, y: -50 })
 
   useEffect(() => {
     const updateMousePosition = (ev: PointerEvent) => {
@@ -14,12 +14,14 @@ const CustomCursor = () => {
     }
 
     window.addEventListener("pointermove", updateMousePosition)
+    document.body.classList.add("custom-cursor")
 
     // window.addEventListener("mousemove", updateMousePosition)
     // window.addEventListener("touchmove", updateMousePosition)
 
     return () => {
-      window.addEventListener("pointermove", updateMousePosition)
+      window.removeEventListener("pointermove", updateMousePosition)
+      document.body.classList.remove("custom-cursor")
       // window.removeEventListener("mousemove", updateMousePosition)
       // window.removeEventListener("touchmove", updateMousePosition)
     }

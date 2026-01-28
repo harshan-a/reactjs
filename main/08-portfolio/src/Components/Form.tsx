@@ -30,15 +30,24 @@ export default function Form() {
       //   },
       //   body: JSON.stringify({ name, email, message }),
       // })
+      document.body.classList.remove("custom-cursor")
+      setTimeout(() => {
+        alert("Thank you for your feedback!")
+        document.body.classList.add("custom-cursor")
+      }, 100)
+
       setIsLoading(false)
-      alert("Thank you for your feedback!")
       setName("")
       setEmail("")
       setMessage("")
       console.log("Form submitted successfully")
     } catch (error) {
+      document.body.classList.remove("custom-cursor")
+      setTimeout(() => {
+        alert("There was an error submitting the form. Please try again later.")
+        document.body.classList.add("custom-cursor")
+      }, 100)
       setIsLoading(false)
-      alert("There was an error submitting the form. Please try again later.")
       console.error("Error submitting form:", error)
     }
   }
