@@ -14,7 +14,7 @@ export default function Form() {
     try {
       setIsLoading(true)
       await axios.post(
-        `${import.meta.env.VITE_BASE_URL}/feedbacks`,
+        `${import.meta.env.VITE_BASE_URL}/api/v1/feedbacks`,
         {
           name,
           email,

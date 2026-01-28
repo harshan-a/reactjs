@@ -12,7 +12,7 @@ export default function App() {
   async function registerVisitor() {
     try {
       await axios.post(
-        `${import.meta.env.VITE_BASE_URL}/visitors`,
+        `${import.meta.env.VITE_BASE_URL}/api/v1/visitors`,
         {},
         { withCredentials: true },
       )
