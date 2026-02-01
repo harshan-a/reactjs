@@ -28,18 +28,18 @@ export default function Contact() {
               <span>linkedin.com/in/harshan-amuthan</span>
             </a>
             <a
-              href="mailto:harshanamuthan@gmail.com"
+              href="mailto:contact@harshan.io"
               target="_blank"
               className="contact-link">
               <img src={emailLogo} alt="Email" />
-              <span>harshanamuthan@gmail.com</span>
+              <span>contact@harshan.io</span>
             </a>
             <a
               href="https://maps.app.goo.gl/wGfuxNDZVxmLvF4u6"
               target="_blank"
               className="contact-link">
               <img src={locationLogo} alt="Location" />
-              <span>Salem, Tamil Nadu, India</span>
+              <span>Salem, Tamil Nadu</span>
             </a>
           </nav>
           <p className="tracking-wide text-cyan-400! w-fit m-auto">

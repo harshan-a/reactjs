@@ -46,7 +46,7 @@ export default function Hero() {
         </p>
         <div className="flex gap-x-3 mt-4 select-none">
           <a
-            href="https://drive.google.com/file/d/1DZiBQGzbVnJe8TKjstYhqMXQKsyGEyyJ/view?usp=drive_link"
+            href={import.meta.env.VITE_RESUME_LINK}
             target="_blank"
             className="btn-primary px-5 py-2 ">
             <span className="material-symbols-outlined text-black">

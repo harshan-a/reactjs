@@ -19,7 +19,7 @@ export default function Footer() {
         <a href="https://www.linkedin.com/in/harshan-amuthan" target="_blank">
           <img src={linkedinLogo} alt="linkedin" />
         </a>
-        <a href="mailto:harshanamuthan@gmail.com" target="_blank">
+        <a href="mailto:contact@harshan.io" target="_blank">
           <img src={emailLogo} alt="email" />
         </a>
       </nav>
